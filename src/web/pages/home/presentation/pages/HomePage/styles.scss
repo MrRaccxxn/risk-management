@@ -1,0 +1,16 @@
+@import "../../components/SideBar/styles.scss";
+@import "../../components/MainContent/styles.scss";
+@import "../../components/AsideBar/styles.scss";
+
+.dashboard {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 75px 1fr 30%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+  }
+}

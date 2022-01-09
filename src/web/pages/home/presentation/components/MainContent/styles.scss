@@ -1,0 +1,8 @@
+@import './BalanceChart/styles.scss';
+@import './CurrentInvestment/styles.scss';
+
+.main__content{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}

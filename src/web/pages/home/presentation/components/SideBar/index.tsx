@@ -1,12 +1,14 @@
+import BoxIcon from "./BoxIcon";
+import { faHome, faCog, faSearch} from '@fortawesome/free-solid-svg-icons'
+
 const SideBar = () => {
   return (
     <div className="sidebar">
-      <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-      </ul>
+      <div className="sidebar__list__item">
+        <div><BoxIcon icon={faHome}/></div>
+        <div><BoxIcon icon={faSearch}/></div>
+        <div><BoxIcon icon={faCog}/></div>
+      </div>
     </div>
   );
 };

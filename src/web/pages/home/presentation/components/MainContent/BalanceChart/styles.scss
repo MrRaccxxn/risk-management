@@ -1,3 +1,32 @@
 .balance__chart {
-  background-color: red;
+  .balance__container {
+    padding: 5%;
+
+    .balance__title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .icon__options {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .balance__resume {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .balance__amount {
+        font-size: 6rem;
+      }
+
+      .balance__percentage {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }

@@ -5,8 +5,7 @@
 .dashboard {
   display: grid;
   height: 100vh;
-  gap: 1rem;
-  grid-template-columns: 6% 1fr 30%;
+  grid-template-columns: 75px 1fr 30%;
 
   @media (max-width: 768px) {
     display: flex;

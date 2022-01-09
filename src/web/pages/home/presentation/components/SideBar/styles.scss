@@ -1,3 +1,15 @@
+@import './BoxIcon/styles.scss';
+
 .sidebar{
-    background-color: blue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    .sidebar__list__item{
+        width: 80%;
+    }
 }
+

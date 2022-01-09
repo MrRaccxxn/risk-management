@@ -1,4 +1,15 @@
 .balance__chart {
+  position: relative;
+  #balance__chart__trade{
+    z-index: -1;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   .balance__container {
     padding: 5%;
 

@@ -1,6 +1,10 @@
+@import './Currency/styles.scss';
+@import './ActionButtons/styles.scss';
+
 .balance__chart {
   position: relative;
-  #balance__chart__trade{
+
+  #balance__chart__trade {
     z-index: -1;
     opacity: 0.4;
     top: 0;
@@ -21,6 +25,22 @@
       .icon__options {
         display: flex;
         flex-direction: row;
+        
+
+        .icon__option {
+          border-radius: 50%;
+          background-color: #ECF3FE;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 12px;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
       }
     }
 
@@ -38,6 +58,13 @@
         display: flex;
         flex-direction: column;
       }
+    }
+
+    .actionable__buttons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }

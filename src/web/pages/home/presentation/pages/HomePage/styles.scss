@@ -3,9 +3,11 @@
 @import "../../components/AsideBar/styles.scss";
 
 .dashboard {
+  background-color: #416EFE;
+  overflow-y: hidden;
   display: grid;
   height: 100vh;
-  grid-template-columns: 75px 1fr 30%;
+  grid-template-columns: 8% 1fr 30%;
 
   @media (max-width: 768px) {
     display: flex;

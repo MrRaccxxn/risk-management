@@ -1,3 +1,21 @@
-.current_investments{
-    background-color: crimson;
+@import './CircleIcon/styles.scss';
+@import './ListOfInvestment/styles.scss';
+
+.current_investments {
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .text__title {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+
+
+}
+
+.container {
+    padding: 5%;
 }

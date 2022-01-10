@@ -10,7 +10,7 @@ const propTypes = {
 const BoxIcon = ( {icon } : {icon : any}) => {
     return(
        <div className="boxicon">
-          <FontAwesomeIcon icon={icon} color='#416EFE'/>
+          <FontAwesomeIcon icon={icon} color='white'/>
        </div>
     );
 }

@@ -1,6 +1,10 @@
 import { createChart } from "lightweight-charts";
 import { useEffect, useState } from "react";
 import formatNumber from "../../../../../../shared/utils/formatters/amount.util";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShareAlt, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+import ActionButtons from "./ActionButtons";
+import CurrencySelectionable from "./Currency";
 
 const defaultProps = {
   containerId: "balance__chart__trade",
@@ -19,7 +23,7 @@ const BalanceChart = () => {
     const chart = createChart(BalanceChart.defaultProps.containerId, {
       width: parseInt(chartContainer.style.width),
       height: parseInt(chartContainer.style.height),
-      leftPriceScale:{
+      leftPriceScale: {
         visible: false,
       },
       rightPriceScale: {
@@ -29,7 +33,7 @@ const BalanceChart = () => {
         visible: false,
       },
       layout: {
-        backgroundColor: '#fafafa',
+        backgroundColor: "#fafafa",
       },
       grid: {
         horzLines: {
@@ -54,7 +58,7 @@ const BalanceChart = () => {
         },
       },
     });
-    
+
     const lineSeries = chart.addLineSeries();
     lineSeries.setData([]);
 
@@ -74,9 +78,9 @@ const BalanceChart = () => {
     };
 
     chart.addAreaSeries({
-      topColor: 'rgba(156, 39, 176, 1)',
-      bottomColor: 'rgba(41, 121, 255, 0.1)',
-      lineColor: 'rgba(156, 39, 176, 0.8)',
+      topColor: "rgba(156, 39, 176, 1)",
+      bottomColor: "rgba(41, 121, 255, 0.1)",
+      lineColor: "rgba(156, 39, 176, 0.8)",
       lineWidth: 1,
     });
 
@@ -96,18 +100,22 @@ const BalanceChart = () => {
         <div className="balance__title">
           <h2>Dashboard</h2>
           <div className="icon__options">
-            <p>a</p>
-            <p>b</p>
+            <div className="icon__option">
+              <FontAwesomeIcon icon={faShareAlt} color="black" size="sm" />
+            </div>
+            <div className="icon__option">
+              <FontAwesomeIcon icon={faEllipsisH} color="black" size="sm" />
+            </div>
           </div>
         </div>
 
         <div className="balance__resume">
-          <h1 className="balance__amount">$ {formatNumber(balancePrice)}</h1>
-          <div className="balance__percentage">
-            <p>Balance</p>
-            <p>18,04%</p>
-            <p>1,545.58</p>
-          </div>
+          <h1 className="balance__amount">${formatNumber(balancePrice)}</h1>
+        </div>
+
+        <div className="actionable__buttons">
+          <ActionButtons />
+          <CurrencySelectionable />
         </div>
       </div>
     </div>

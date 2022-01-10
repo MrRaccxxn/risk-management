@@ -1,8 +1,11 @@
 @import './BalanceChart/styles.scss';
 @import './CurrentInvestment/styles.scss';
 
-.main__content{
+.main__content {
+    z-index: 1;
+    background-color: white;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
+    border-radius: 45px;
 }

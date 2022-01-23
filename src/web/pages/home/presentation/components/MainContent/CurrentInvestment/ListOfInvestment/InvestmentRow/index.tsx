@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortUp, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 
 const propTypes = {
   icon: PropTypes.any,
@@ -13,11 +15,12 @@ const InvestmentRow = () => {
   return (
     <div className="investment__row">
       <div className="box__icon">A</div>
-      <div>Ethereum</div>
-      <div>ETH</div>
-      <div>1.2222421</div>
-      <div>$ 4,524.44</div>
-      <div>15.44%</div>
+      <span className="token__name">Ethereum</span>
+      <span className="token__initials">ETH</span>
+      <span className="token__quantity">1.2222421</span>
+      <span className="token__price">$ 4,524.44</span>
+      <span className="token__percentage"><FontAwesomeIcon icon={faSortUp} size="sm" /> 15.44%</span>
+      <span className="token__more__options"><FontAwesomeIcon icon={faEllipsisH} size="sm" /></span>
     </div>
   );
 };
@@ -25,3 +28,5 @@ const InvestmentRow = () => {
 InvestmentRow.prototype = propTypes;
 
 export default InvestmentRow;
+
+        

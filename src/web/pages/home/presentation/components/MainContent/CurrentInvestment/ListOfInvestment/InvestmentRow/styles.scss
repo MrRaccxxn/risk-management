@@ -1,6 +1,43 @@
 .investment__row{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     margin: 20px;
+
+    .box__icon{
+        background-color: #EEF4FF;
+        border-radius: 10px;
+        padding: 1.5rem;
+    }
+
+    .token__name{
+        font-weight: 500;
+    }
+
+    .token__initials{
+        color: #C4CAD2;
+    }
+
+    .token__quantity{
+        font-weight: bold;
+    }
+
+    .token__price{
+        color: blue;
+    }
+
+    .token__percentage{
+        color: #2CDE92;
+    }
+
+    .token__more__options{
+        color: #C4CAD2;
+
+        &:hover{
+            transition: 0.3s;
+            cursor: pointer;
+            color: #737786;
+        }
+    }
 }
